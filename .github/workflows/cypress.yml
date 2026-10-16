@@ -16,8 +16,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          start: npm start
-          wait-on: 'http://localhost:3000' # Adjust if needed; for external site use browser
-          # For external URL, Cypress can run without start if baseUrl is set
+          browser: chrome
         env:
           CYPRESS_BASE_URL: https://www.patrickataide.com.br
